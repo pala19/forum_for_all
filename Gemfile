@@ -30,6 +30,8 @@ gem 'activeadmin'
 gem 'devise'
 gem 'rubocop'
 gem 'slim-rails'
+gem 'bootstrap', '~> 4.1.3'
+gem 'jquery-rails'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
