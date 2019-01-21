@@ -1,0 +1,24 @@
+h1 =@post.title
+hr
+p =@post.content
+hr
+.container
+  -@comments.each do |comment|
+    .row
+      .col
+        =comment.user_id
+      .w-100
+      .col
+        =comment.content
+
+=form_for @comment do |f|
+  =f.hidden_field :post_id
+
+  .form-group
+    =f.text_field :title, rows: 1, class: 'form-control'
+  .form-group
+    =f.text_area :content, rows: 5, class: 'form-control'
+  .form-group
+    =f.submit 'Dodaj komentarz', class: 'btn btn-primary'
+
+
