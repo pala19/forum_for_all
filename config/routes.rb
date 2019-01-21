@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root to: 'posts#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  namespace :user_panel, path: 'user' do
-    root to: 'user#index'
-  end
+  resources :user, only: [:index]
   resources :posts, only: [:index]
 end
