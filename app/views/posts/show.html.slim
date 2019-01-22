@@ -10,15 +10,19 @@ hr
       .w-100
       .col
         =comment.content
+-if user_signed_in?
+  h3 Dodaj komentarz
+  hr
+  =form_for @comment do |f|
+    =f.hidden_field :post_id
 
-=form_for @comment do |f|
-  =f.hidden_field :post_id
-
-  .form-group
-    =f.text_field :title, rows: 1, class: 'form-control'
-  .form-group
-    =f.text_area :content, rows: 5, class: 'form-control'
-  .form-group
-    =f.submit 'Dodaj komentarz', class: 'btn btn-primary'
+    .form-group
+      label Tytuł
+      =f.text_field :title, rows: 1, class: 'form-control'
+    .form-group
+      label Treść
+      =f.text_area :content, rows: 5, class: 'form-control'
+    .form-group
+      =f.submit 'Wyślij', class: 'btn btn-primary'
 
 

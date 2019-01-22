@@ -3,5 +3,6 @@ class UserController < ApplicationController
 
   def index
     @post = Post.where(:user_id => current_user.id)
+    @new_post = Post.new(user_id: current_user.id)
   end
 end

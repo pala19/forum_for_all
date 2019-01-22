@@ -4,7 +4,7 @@ class CommentsController < ApplicationController
         params.require(:comment).permit(:title, :content, :post_id)
                    .merge(user_id: current_user.id))
     flash[:notice] = if @comment.save
-                       'Komentarz zapisany'
+                       'Komentarz opublikowany'
                      else
                        @comment.errors.full_messages.join('. ')
                      end

@@ -1,4 +1,16 @@
-h1 Panel użytkownika
+h1 Witaj, =current_user.nick
 ul class="list-group"
   - @post.each do |post|
     li class="list-group-item" = post.title
+
+h2 Dodaj nowy post
+
+=form_for @new_post do |f|
+  .form-group
+    label Tytuł
+    =f.text_field :title, rows: 1, class: 'form-control'
+  .form-group
+    label Treść
+    =f.text_area :content, rows: 5, class: 'form-control'
+  .form-group
+    =f.submit 'Wyślij', class: 'btn btn-primary'
