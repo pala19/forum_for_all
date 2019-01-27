@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class RemoveTitleFromComments < ActiveRecord::Migration[5.2]
   def change
     remove_column :comments, :title, :string

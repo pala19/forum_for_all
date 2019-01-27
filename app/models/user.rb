@@ -10,6 +10,6 @@ class User < ApplicationRecord
   validates_presence_of :nick
 
   def display_nick
-      nick
+    nick
   end
 end
