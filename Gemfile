@@ -33,6 +33,7 @@ gem 'jquery-rails'
 gem 'rubocop'
 gem 'slim-rails'
 gem 'sprockets-rails'
+gem 'rails-controller-testing'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
