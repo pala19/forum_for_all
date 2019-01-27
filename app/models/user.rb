@@ -7,4 +7,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :posts
   has_many :comments, through: :posts
+  validates_presence_of :nick
+
+  def display_nick
+      nick
+  end
 end
